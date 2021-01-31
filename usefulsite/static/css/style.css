@@ -1,0 +1,32 @@
+body{
+     font-size: 80%; /* font size */
+     font-family: "MS Sans Serif", Geneva, sans-serif ;
+}
+
+.b1 {
+
+    color: white; /* font color */
+    font-size: 10pt; /* font size */
+    border-color: #336699;
+    border-radius: 5px;
+    background: linear-gradient(to top, #6699CC, #6699CC 50%, #99BBEE 50%);
+    box-shadow: 1px 1px 2px black;
+    }
+
+a:link {
+  text-decoration: none; /* take away underlining */
+  color: #555555;
+  border-bottom: 1px dashed #999999; /* underline */
+}
+a:visited {
+  color: #555555;
+}
+a:hover {
+  color: #000000;
+  border-bottom: .07em solid;
+}
+a:active {
+  color: #497DDD;
+  border-bottom: 1px dashed;
+}
+
