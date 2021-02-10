@@ -37,14 +37,20 @@ def replaceit(request):
 
 def magic(request):
     function_description = functions_db[1]["description"] #here is needed to change DB index to "i", it must be find in DB by key "magic" and return dictionary position
-    # number length
-    n = str(input())
-    # preparing output format  
-    n_formated = "%0." + n + "d"
-    range_n = int(int(n) * '9')
-    # generating number
-    num_list = list(n_formated % random.randint(0,range_n))
-    magic_result = ''.join(num_list) 
+    n = ''
+    n_formated = ''
+    range_n = 5
+    num_list = ''
+    magic_result = ''
+    if request.method == 'POST':
+        # number length
+        n = request.POST['num_length']
+        # preparing output format  
+        n_formated = "%0." + n + "d"
+        range_n = int(int(n) * '9')
+        # generating number
+        num_list = list(n_formated % random.randint(0,range_n))
+        magic_result = ''.join(num_list) 
     context = {'function_description': function_description,
               'magic_result': magic_result
               }
