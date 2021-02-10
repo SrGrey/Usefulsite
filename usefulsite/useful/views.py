@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import functions_db
+import random
 #from django.core.context_processors import csrf
 #from import request
 
@@ -36,5 +37,15 @@ def replaceit(request):
 
 def magic(request):
     function_description = functions_db[1]["description"] #here is needed to change DB index to "i", it must be find in DB by key "magic" and return dictionary position
-    context = {'function_description': function_description}
+    # number length
+    n = str(input())
+    # preparing output format  
+    n_formated = "%0." + n + "d"
+    range_n = int(int(n) * '9')
+    # generating number
+    num_list = list(n_formated % random.randint(0,range_n))
+    magic_result = ''.join(num_list) 
+    context = {'function_description': function_description,
+              'magic_result': magic_result
+              }
     return render(request, 'useful/magic.html', context)
