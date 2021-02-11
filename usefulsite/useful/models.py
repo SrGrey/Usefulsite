@@ -11,7 +11,7 @@ functions_db = [
     },
     {
     'name': 'Magic',
-    'description': ('help to generate a random number for buying "Once" '
-                    'lottery. Goodluck!'),
+    'description': ('help to generate a random number for buying lottery. '
+                    'Goodluck!'),
     },
 ]
