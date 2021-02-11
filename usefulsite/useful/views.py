@@ -50,7 +50,7 @@ def magic(request):
         range_n = int(int(n) * '9')
         # generating number
         num_list = list(n_formated % random.randint(0,range_n))
-        magic_result = f'If you like it you may use this number:<h1><b>{"".join(num_list)}</b></h1>' 
+        magic_result = f'If you like it you may use this number:<font size="5"><b>{"".join(num_list)}</b></font>' 
     context = {'function_description': function_description,
               'magic_result': magic_result
               }
