@@ -10,5 +10,5 @@ urlpatterns = [
     # указывается не полностью
     path('', views.useful_functions_list),
     path('ReplaceIt', views.replaceit),
-    path('magic', views.magic),
+    path('Magic', views.magic),
 ]
