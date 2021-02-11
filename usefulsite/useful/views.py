@@ -54,4 +54,4 @@ def magic(request):
     context = {'function_description': function_description,
               'magic_result': magic_result
               }
-    return render(request, 'useful/magic.html', context)
+    return render(request, 'useful/Magic.html', context)
